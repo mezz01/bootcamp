@@ -4,7 +4,7 @@ import People from "./components/people";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 pt-10 text-stone-100 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 pb-72 pt-10 text-stone-100 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
       <div className="flex flex-col h-svh" >
             <div className="hero relative">
                 <h1 className="herotxt text-[130px] p-36 pl-2 pr-2 pb-10 pt-24 font-bold tracking-wide text-center leading-tight">

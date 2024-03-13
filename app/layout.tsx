@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/app/components/footer"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="text-stone-300 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" lang="en">
+    <html className="text-stone-300 bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900" lang="en">
       <body className={inter.className}>{children}</body>
+      <Footer></Footer>
     </html>
   );
 }

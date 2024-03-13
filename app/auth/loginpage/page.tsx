@@ -1,4 +1,35 @@
+"use client"
+
+import { useState } from "react";
+import Link from "next/link"
+
 export default function LoginPage() {
+
+    const [email, setEmail] = useState("");
+    const [pass, setPass] = useState("");
+
+    const handleSubmit = async (e: any) => {
+        try {
+            const res = await fetch('/api/sigin', {
+                method: "GET",
+                headers: {
+                    "Content-Type" : "application/json" 
+                },
+                body: JSON.stringify({
+                    email,
+                    pass,
+                }),
+            });
+            
+            if(res.ok){
+                const form = e.target;
+                form.reset();
+            } else {
+                console.log("problem with registration");
+            }
+        } catch (error) {}
+    };
+
     return (
         <div className="flex h-full bg-white flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -8,7 +39,7 @@ export default function LoginPage() {
           </div>
   
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" action="#" method="POST">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                   Email address
@@ -53,7 +84,7 @@ export default function LoginPage() {
                   type="submit"
                   className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
-                  Sign in
+                 <Link href="../profile">Sign in</Link> 
                 </button>
               </div>
             </form>

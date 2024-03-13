@@ -1,6 +1,6 @@
-import mongoose, { Shema, models } from "mongoose";
+import mongoose, { Schema, models } from "mongoose";
 
-const compShema = new Shema(
+const compShema = new Schema(
 {
     progLang: {
         type: String,

@@ -9,7 +9,6 @@ export default function SignupPage(){
     const [pass, setPass] = useState("");
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
         try {
             const res = await fetch('/api/signup', {
                 method: "POST",
@@ -27,7 +26,7 @@ export default function SignupPage(){
                 const form = e.target;
                 form.reset();
             } else {
-                console.log("kifach with registration");
+                console.log("Problem with registration");
             }
         } catch (error) {}
     };

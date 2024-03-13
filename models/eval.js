@@ -1,6 +1,6 @@
-import mongoose, { Shema, models } from "mongoose";
+import mongoose, { Schema, models } from "mongoose";
 
-const evalShema = new Shema(
+const evalShema = new Schema(
 {
     note: {
         type: Number,

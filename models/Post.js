@@ -1,6 +1,6 @@
-import mongoose, { Shema, models } from "mongoose";
+import mongoose, { Schema, models } from "mongoose";
 
-const postShema = new Shema(
+const postShema = new Schema(
 {
     feedback: {
         type: String,

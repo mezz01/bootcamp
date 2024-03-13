@@ -1,6 +1,6 @@
-import mongoose, { Shema, models } from "mongoose";
+import mongoose, { Schema, models } from "mongoose";
 
-const offersShema = new Shema(
+const offersShema = new Schema(
 {
     title: {
         type: String,
