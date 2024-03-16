@@ -43,7 +43,7 @@ export default function Evaluation(){
                   </h1>
               </div>
               <div className="adds flex justify-between pt-16 p-20 pl-0">
-                  <p className="font-sans font-thin text-3xl pl-32">Students list :</p>
+                  <p className="font-sans text-3xl pl-20">Students list :</p>
               </div>
               
 

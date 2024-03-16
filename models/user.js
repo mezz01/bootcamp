@@ -10,6 +10,10 @@ const useShema = new Schema(
         type: String,
         required: true,
     },
+    num: {
+        type: Number,
+        required: true,
+    },
     pass: {
         type: String,
         required: true,
